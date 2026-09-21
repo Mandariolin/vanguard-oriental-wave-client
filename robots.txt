@@ -1,0 +1,2 @@
+User-agent: *
+Sitemap: oriental-wave.com/sitemap.xml

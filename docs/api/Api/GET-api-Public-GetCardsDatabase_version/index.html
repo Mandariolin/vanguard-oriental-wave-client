@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="it-IT">
+<head prefix="og: http://ogp.me/ns# ">
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+        <title>GET api/Public/GetCardsDatabase?version={version} | oriental-wave.com</title>
+
+    <link rel="canonical" content="https://oriental-wave.com/docs/api/Api/GET-api-Public-GetCardsDatabase_version" />
+    <link href="../../../../favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="../../../../favicon.ico" rel="icon" type="image/x-icon" />
+
+    <meta http-equiv="content-language" content="it" />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0" />
+    <meta name="format-detection" content="telephone=no" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="../../../../Content/private/apple/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="../../../../Content/private/apple/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="../../../../Content/private/apple/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="../../../../Content/private/apple/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="../../../../Content/private/apple/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="../../../../Content/private/apple/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="../../../../Content/private/apple/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="../../../../Content/private/apple/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../../../../Content/private/apple/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="../../../../Content/private/android/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="../../../../Content/private/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="../../../../Content/private/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="../../../../Content/private/favicon-16x16.png" />
+    <link rel="manifest" href="../../../../Content/private/android/manifest.json" />
+    <meta name="msapplication-TileColor" content="#3265a6" />
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#3265a6" />
+
+    <meta name="author" content="Oriental Wave" />
+    <meta name="copyright" content="© 2023 Oriental Wave S.r.l." />
+    <meta name="description" content="Scopri il mondo di Cardfight!! Vanguard in questo nuovo ed emozionante Gioco di Carte Collezionabili!" />
+
+    <meta name="keywords" content="cardfight, vanguard, italia, oriental wave, distruttore delle lame, sovrano draconico, aichi, kai, misaki, kamui, gioco di carte collezionabili, tcg, gcc, cfv" />
+
+    <meta itemprop="name" content="GET api/Public/GetCardsDatabase?version={version}" />
+    <meta itemprop="description" content="Scopri il mondo di Cardfight!! Vanguard in questo nuovo ed emozionante Gioco di Carte Collezionabili!" />
+    <meta itemprop="image" content="https://oriental-wave.com/Content/private/vg-logo-g.png" />
+
+    <meta property="og:locale" content="it_IT" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="GET api/Public/GetCardsDatabase?version={version}" />
+    <meta property="og:description" content="Scopri il mondo di Cardfight!! Vanguard in questo nuovo ed emozionante Gioco di Carte Collezionabili!" />
+    <meta property="og:url" content="https://oriental-wave.com/docs/api/Api/GET-api-Public-GetCardsDatabase_version" />
+    <meta property="og:site_name" content="Oriental Wave" />
+    <meta property="og:image" content="https://oriental-wave.com/Content/private/vg-logo-g.png" />
+    <meta property="og:image:secure_url" content="https://oriental-wave.com/Content/private/vg-logo-g.png" />
+    
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:description" content="Scopri il mondo di Cardfight!! Vanguard in questo nuovo ed emozionante Gioco di Carte Collezionabili!" />
+    <meta name="twitter:title" content="GET api/Public/GetCardsDatabase?version={version}" />
+    <meta name="twitter:site" content="@cfvanguardit" />
+    <meta name="twitter:image" content="https://oriental-wave.com/Content/private/vg-logo-g.png" />
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
+    <link href="../../../../Content/css__qd0dfd5ae54b0/index.html" rel="stylesheet"/>
+
+    <link href="../../../../Content/styles__q014ae0c62a90/index.html" rel="stylesheet"/>
+
+    <link href="../../../../Content/font-awesome/css/all.min.css" rel="stylesheet" />
+    <script src="../../../../bundles/jquery__q6d5997a5421f/index.html"></script>
+
+    <script src="../../../../bundles/modernizr__qbad6e068dc1f/index.html"></script>
+
+    <script src="../../../../bundles/bootstrap__q5a825f5b5b8d/index.html"></script>
+
+    <script src="../../../../bundles/scripts__q446e1063fea8/index.html"></script>
+
+    
+    <script>
+        (function (i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date(); a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+        ga('create', 'UA-91910151-1', 'auto');
+        ga('send', 'pageview');
+    </script>
+    <script src="https://www.google.com/recaptcha/api.js?hl=it"></script>
+</head>
+<body>
+    
+<div class="simple-body">
+    <div class="container simple-container ">
+        <div class="simple-header">
+            <a href="/">
+                <img src="../../../../Content/private/oriental.png" alt="Oriental Wave Logo" />
+            </a>
+        </div>
+        <hr />
+        <div class="card card-body">
+            
+<div id="body" class="help-page">
+    <section class="featured">
+        <div class="content-wrapper">
+            <p>
+                <a href="../../../../docs/api/index.html">Help Page Home</a>
+            </p>
+        </div>
+    </section>
+    <section class="content-wrapper main-content clear-fix">
+        
+<h1>GET api/Public/GetCardsDatabase?version={version}</h1>
+<div>
+    <p>Download a copy of the card database. If the parameter  is not specified, the entire card database is downloaded. If, on the other hand, the parameter  is specified, only the changes made to the database from the specified version will be downloaded.</p>
+
+    <h2>Request Information</h2>
+
+    <h3>URI Parameters</h3>
+        <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">version</td>
+                    <td class="parameter-documentation">
+                        <p>(optional parameter) the local version of the database to be updated</p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+
+    <h3>Body Parameters</h3>
+
+    <p></p>
+
+        <p>None.</p>
+
+
+    <h2>Response Information</h2>
+
+    <h3>Resource Description</h3>
+
+    <p>The data of the cards contained in the database</p>
+
+        Collection of <a href="../../../../docs/api/ResourceModel__q8983f0ed0f8e/index.html">ApiCard</a>
+    <table class="help-page-table">
+        <thead>
+            <tr><th>Name</th><th>Description</th><th>Type</th><th>Additional information</th></tr>
+        </thead>
+        <tbody>
+                <tr>
+                    <td class="parameter-name">CardId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CardName</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CardNameEnglish</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CardNumber</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CardVariant</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">GZone</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Power</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Shield</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Critical</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Grade</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Skill</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ExpansionId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">ClanId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">RaceId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">RarityId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">TypeId</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Flavour</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Effect</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">StartLimited</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        boolean
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">NumberLimited</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        integer
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">PromoReleaseInfo</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Alias</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        string
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">CardExpansion</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../../../../docs/api/ResourceModel__q3c0512ca6d70/index.html">ApiCardExpansion</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Clan</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../../../../docs/api/ResourceModel__qbea07a68babc/index.html">ApiCardClan</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Race</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../../../../docs/api/ResourceModel__q8a4a9ad15899/index.html">ApiCardRace</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Rarity</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../../../../docs/api/ResourceModel__q0905a40c1554/index.html">ApiCardRarity</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Type</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                        <a href="../../../../docs/api/ResourceModel__q86ef6a691917/index.html">ApiCardType</a>
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="parameter-name">Faqs</td>
+                    <td class="parameter-documentation">
+                        <p></p>
+                    </td>
+                    <td class="parameter-type">
+                                Collection of <a href="../../../../docs/api/ResourceModel__qb6720f2382e1/index.html">ApiCardFaq</a>
+
+                    </td>
+                    <td class="parameter-annotations">
+                            <p>None.</p>
+                    </td>
+                </tr>
+        </tbody>
+    </table>
+
+
+        <h3>Response Formats</h3>
+
+<div>
+        <h4 class="sample-header">application/json, text/json</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">[
+  {
+    &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCard, VanguardApp.Shared.ApiModels&quot;,
+    &quot;cardId&quot;: 1,
+    &quot;cardName&quot;: &quot;sample string 2&quot;,
+    &quot;cardNameEnglish&quot;: &quot;sample string 3&quot;,
+    &quot;cardNumber&quot;: 4,
+    &quot;cardVariant&quot;: &quot;sample string 5&quot;,
+    &quot;gZone&quot;: true,
+    &quot;power&quot;: 1,
+    &quot;shield&quot;: 1,
+    &quot;critical&quot;: 1,
+    &quot;grade&quot;: 1,
+    &quot;skill&quot;: 1,
+    &quot;expansionId&quot;: 7,
+    &quot;clanId&quot;: 8,
+    &quot;raceId&quot;: 9,
+    &quot;rarityId&quot;: 10,
+    &quot;typeId&quot;: 11,
+    &quot;flavour&quot;: &quot;sample string 12&quot;,
+    &quot;effect&quot;: &quot;sample string 13&quot;,
+    &quot;startLimited&quot;: true,
+    &quot;numberLimited&quot;: 15,
+    &quot;promoReleaseInfo&quot;: &quot;sample string 16&quot;,
+    &quot;alias&quot;: &quot;sample string 17&quot;,
+    &quot;cardExpansion&quot;: {
+      &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardExpansion, VanguardApp.Shared.ApiModels&quot;,
+      &quot;expansionId&quot;: 1,
+      &quot;expansionCode&quot;: &quot;sample string 2&quot;,
+      &quot;expansionName&quot;: &quot;sample string 3&quot;,
+      &quot;expansionGroupId&quot;: 4,
+      &quot;publishOrder&quot;: 5,
+      &quot;hasLogo&quot;: true,
+      &quot;generationId&quot;: 7,
+      &quot;spoiler&quot;: true,
+      &quot;expansionGroup&quot;: {
+        &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardExpansionGroup, VanguardApp.Shared.ApiModels&quot;,
+        &quot;groupId&quot;: 1,
+        &quot;groupName&quot;: &quot;sample string 2&quot;
+      },
+      &quot;generation&quot;: {
+        &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardGeneration, VanguardApp.Shared.ApiModels&quot;,
+        &quot;id&quot;: 1,
+        &quot;generationName&quot;: &quot;sample string 2&quot;
+      }
+    },
+    &quot;clan&quot;: {
+      &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardClan, VanguardApp.Shared.ApiModels&quot;,
+      &quot;clanId&quot;: 1,
+      &quot;clanName&quot;: &quot;sample string 2&quot;,
+      &quot;nationId&quot;: 3,
+      &quot;nation&quot;: {
+        &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardNation, VanguardApp.Shared.ApiModels&quot;,
+        &quot;nationId&quot;: 1,
+        &quot;nationName&quot;: &quot;sample string 2&quot;
+      }
+    },
+    &quot;race&quot;: {
+      &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardRace, VanguardApp.Shared.ApiModels&quot;,
+      &quot;raceId&quot;: 1,
+      &quot;raceName&quot;: &quot;sample string 2&quot;
+    },
+    &quot;rarity&quot;: {
+      &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardRarity, VanguardApp.Shared.ApiModels&quot;,
+      &quot;rarityId&quot;: 1,
+      &quot;rarityName&quot;: &quot;sample string 2&quot;,
+      &quot;sparkEffect&quot;: true
+    },
+    &quot;type&quot;: {
+      &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardType, VanguardApp.Shared.ApiModels&quot;,
+      &quot;typeId&quot;: 1,
+      &quot;typeName&quot;: &quot;sample string 2&quot;
+    },
+    &quot;faqs&quot;: [
+      {
+        &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardFaq, VanguardApp.Shared.ApiModels&quot;,
+        &quot;faqId&quot;: 1,
+        &quot;cardId&quot;: 2,
+        &quot;question&quot;: &quot;sample string 3&quot;,
+        &quot;answer&quot;: &quot;sample string 4&quot;
+      },
+      {
+        &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardFaq, VanguardApp.Shared.ApiModels&quot;,
+        &quot;faqId&quot;: 1,
+        &quot;cardId&quot;: 2,
+        &quot;question&quot;: &quot;sample string 3&quot;,
+        &quot;answer&quot;: &quot;sample string 4&quot;
+      }
+    ]
+  },
+  {
+    &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCard, VanguardApp.Shared.ApiModels&quot;,
+    &quot;cardId&quot;: 1,
+    &quot;cardName&quot;: &quot;sample string 2&quot;,
+    &quot;cardNameEnglish&quot;: &quot;sample string 3&quot;,
+    &quot;cardNumber&quot;: 4,
+    &quot;cardVariant&quot;: &quot;sample string 5&quot;,
+    &quot;gZone&quot;: true,
+    &quot;power&quot;: 1,
+    &quot;shield&quot;: 1,
+    &quot;critical&quot;: 1,
+    &quot;grade&quot;: 1,
+    &quot;skill&quot;: 1,
+    &quot;expansionId&quot;: 7,
+    &quot;clanId&quot;: 8,
+    &quot;raceId&quot;: 9,
+    &quot;rarityId&quot;: 10,
+    &quot;typeId&quot;: 11,
+    &quot;flavour&quot;: &quot;sample string 12&quot;,
+    &quot;effect&quot;: &quot;sample string 13&quot;,
+    &quot;startLimited&quot;: true,
+    &quot;numberLimited&quot;: 15,
+    &quot;promoReleaseInfo&quot;: &quot;sample string 16&quot;,
+    &quot;alias&quot;: &quot;sample string 17&quot;,
+    &quot;cardExpansion&quot;: {
+      &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardExpansion, VanguardApp.Shared.ApiModels&quot;,
+      &quot;expansionId&quot;: 1,
+      &quot;expansionCode&quot;: &quot;sample string 2&quot;,
+      &quot;expansionName&quot;: &quot;sample string 3&quot;,
+      &quot;expansionGroupId&quot;: 4,
+      &quot;publishOrder&quot;: 5,
+      &quot;hasLogo&quot;: true,
+      &quot;generationId&quot;: 7,
+      &quot;spoiler&quot;: true,
+      &quot;expansionGroup&quot;: {
+        &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardExpansionGroup, VanguardApp.Shared.ApiModels&quot;,
+        &quot;groupId&quot;: 1,
+        &quot;groupName&quot;: &quot;sample string 2&quot;
+      },
+      &quot;generation&quot;: {
+        &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardGeneration, VanguardApp.Shared.ApiModels&quot;,
+        &quot;id&quot;: 1,
+        &quot;generationName&quot;: &quot;sample string 2&quot;
+      }
+    },
+    &quot;clan&quot;: {
+      &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardClan, VanguardApp.Shared.ApiModels&quot;,
+      &quot;clanId&quot;: 1,
+      &quot;clanName&quot;: &quot;sample string 2&quot;,
+      &quot;nationId&quot;: 3,
+      &quot;nation&quot;: {
+        &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardNation, VanguardApp.Shared.ApiModels&quot;,
+        &quot;nationId&quot;: 1,
+        &quot;nationName&quot;: &quot;sample string 2&quot;
+      }
+    },
+    &quot;race&quot;: {
+      &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardRace, VanguardApp.Shared.ApiModels&quot;,
+      &quot;raceId&quot;: 1,
+      &quot;raceName&quot;: &quot;sample string 2&quot;
+    },
+    &quot;rarity&quot;: {
+      &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardRarity, VanguardApp.Shared.ApiModels&quot;,
+      &quot;rarityId&quot;: 1,
+      &quot;rarityName&quot;: &quot;sample string 2&quot;,
+      &quot;sparkEffect&quot;: true
+    },
+    &quot;type&quot;: {
+      &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardType, VanguardApp.Shared.ApiModels&quot;,
+      &quot;typeId&quot;: 1,
+      &quot;typeName&quot;: &quot;sample string 2&quot;
+    },
+    &quot;faqs&quot;: [
+      {
+        &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardFaq, VanguardApp.Shared.ApiModels&quot;,
+        &quot;faqId&quot;: 1,
+        &quot;cardId&quot;: 2,
+        &quot;question&quot;: &quot;sample string 3&quot;,
+        &quot;answer&quot;: &quot;sample string 4&quot;
+      },
+      {
+        &quot;$type&quot;: &quot;VanguardApp.Shared.ApiModels.ApiCardFaq, VanguardApp.Shared.ApiModels&quot;,
+        &quot;faqId&quot;: 1,
+        &quot;cardId&quot;: 2,
+        &quot;question&quot;: &quot;sample string 3&quot;,
+        &quot;answer&quot;: &quot;sample string 4&quot;
+      }
+    ]
+  }
+]</pre>
+        </div>
+        <h4 class="sample-header">application/xml, text/xml</h4>
+        <div class="sample-content">
+            <span><b>Sample:</b></span>
+<pre class="wrapped">&lt;ArrayOfApiCard xmlns:i=&quot;http://www.w3.org/2001/XMLSchema-instance&quot; xmlns=&quot;http://schemas.datacontract.org/2004/07/VanguardApp.Shared.ApiModels&quot;&gt;
+  &lt;ApiCard&gt;
+    &lt;Alias&gt;sample string 17&lt;/Alias&gt;
+    &lt;CardExpansion&gt;
+      &lt;ExpansionCode&gt;sample string 2&lt;/ExpansionCode&gt;
+      &lt;ExpansionGroup&gt;
+        &lt;GroupId&gt;1&lt;/GroupId&gt;
+        &lt;GroupName&gt;sample string 2&lt;/GroupName&gt;
+      &lt;/ExpansionGroup&gt;
+      &lt;ExpansionGroupId&gt;4&lt;/ExpansionGroupId&gt;
+      &lt;ExpansionId&gt;1&lt;/ExpansionId&gt;
+      &lt;ExpansionName&gt;sample string 3&lt;/ExpansionName&gt;
+      &lt;Generation&gt;
+        &lt;GenerationName&gt;sample string 2&lt;/GenerationName&gt;
+        &lt;Id&gt;1&lt;/Id&gt;
+      &lt;/Generation&gt;
+      &lt;GenerationId&gt;7&lt;/GenerationId&gt;
+      &lt;HasLogo&gt;true&lt;/HasLogo&gt;
+      &lt;PublishOrder&gt;5&lt;/PublishOrder&gt;
+      &lt;Spoiler&gt;true&lt;/Spoiler&gt;
+    &lt;/CardExpansion&gt;
+    &lt;CardId&gt;1&lt;/CardId&gt;
+    &lt;CardName&gt;sample string 2&lt;/CardName&gt;
+    &lt;CardNameEnglish&gt;sample string 3&lt;/CardNameEnglish&gt;
+    &lt;CardNumber&gt;4&lt;/CardNumber&gt;
+    &lt;CardVariant&gt;sample string 5&lt;/CardVariant&gt;
+    &lt;Clan&gt;
+      &lt;ClanId&gt;1&lt;/ClanId&gt;
+      &lt;ClanName&gt;sample string 2&lt;/ClanName&gt;
+      &lt;Nation&gt;
+        &lt;NationId&gt;1&lt;/NationId&gt;
+        &lt;NationName&gt;sample string 2&lt;/NationName&gt;
+      &lt;/Nation&gt;
+      &lt;NationId&gt;3&lt;/NationId&gt;
+    &lt;/Clan&gt;
+    &lt;ClanId&gt;8&lt;/ClanId&gt;
+    &lt;Critical&gt;1&lt;/Critical&gt;
+    &lt;Effect&gt;sample string 13&lt;/Effect&gt;
+    &lt;ErrataCorrige /&gt;
+    &lt;ExpansionId&gt;7&lt;/ExpansionId&gt;
+    &lt;Faqs&gt;
+      &lt;ApiCardFaq&gt;
+        &lt;Answer&gt;sample string 4&lt;/Answer&gt;
+        &lt;CardId&gt;2&lt;/CardId&gt;
+        &lt;FaqId&gt;1&lt;/FaqId&gt;
+        &lt;Question&gt;sample string 3&lt;/Question&gt;
+      &lt;/ApiCardFaq&gt;
+      &lt;ApiCardFaq&gt;
+        &lt;Answer&gt;sample string 4&lt;/Answer&gt;
+        &lt;CardId&gt;2&lt;/CardId&gt;
+        &lt;FaqId&gt;1&lt;/FaqId&gt;
+        &lt;Question&gt;sample string 3&lt;/Question&gt;
+      &lt;/ApiCardFaq&gt;
+    &lt;/Faqs&gt;
+    &lt;Flavour&gt;sample string 12&lt;/Flavour&gt;
+    &lt;GZone&gt;true&lt;/GZone&gt;
+    &lt;Grade&gt;1&lt;/Grade&gt;
+    &lt;NumberLimited&gt;15&lt;/NumberLimited&gt;
+    &lt;Power&gt;1&lt;/Power&gt;
+    &lt;PromoReleaseInfo&gt;sample string 16&lt;/PromoReleaseInfo&gt;
+    &lt;Race&gt;
+      &lt;RaceId&gt;1&lt;/RaceId&gt;
+      &lt;RaceName&gt;sample string 2&lt;/RaceName&gt;
+    &lt;/Race&gt;
+    &lt;RaceId&gt;9&lt;/RaceId&gt;
+    &lt;Rarity&gt;
+      &lt;RarityId&gt;1&lt;/RarityId&gt;
+      &lt;RarityName&gt;sample string 2&lt;/RarityName&gt;
+      &lt;SparkEffect&gt;true&lt;/SparkEffect&gt;
+    &lt;/Rarity&gt;
+    &lt;RarityId&gt;10&lt;/RarityId&gt;
+    &lt;Shield&gt;1&lt;/Shield&gt;
+    &lt;Skill&gt;1&lt;/Skill&gt;
+    &lt;StandardFaqs&gt;
+      &lt;ApiCardFaq&gt;
+        &lt;Answer&gt;sample string 4&lt;/Answer&gt;
+        &lt;CardId&gt;2&lt;/CardId&gt;
+        &lt;FaqId&gt;1&lt;/FaqId&gt;
+        &lt;Question&gt;sample string 3&lt;/Question&gt;
+      &lt;/ApiCardFaq&gt;
+      &lt;ApiCardFaq&gt;
+        &lt;Answer&gt;sample string 4&lt;/Answer&gt;
+        &lt;CardId&gt;2&lt;/CardId&gt;
+        &lt;FaqId&gt;1&lt;/FaqId&gt;
+        &lt;Question&gt;sample string 3&lt;/Question&gt;
+      &lt;/ApiCardFaq&gt;
+    &lt;/StandardFaqs&gt;
+    &lt;StartLimited&gt;true&lt;/StartLimited&gt;
+    &lt;Type&gt;
+      &lt;TypeId&gt;1&lt;/TypeId&gt;
+      &lt;TypeName&gt;sample string 2&lt;/TypeName&gt;
+    &lt;/Type&gt;
+    &lt;TypeId&gt;11&lt;/TypeId&gt;
+  &lt;/ApiCard&gt;
+  &lt;ApiCard&gt;
+    &lt;Alias&gt;sample string 17&lt;/Alias&gt;
+    &lt;CardExpansion&gt;
+      &lt;ExpansionCode&gt;sample string 2&lt;/ExpansionCode&gt;
+      &lt;ExpansionGroup&gt;
+        &lt;GroupId&gt;1&lt;/GroupId&gt;
+        &lt;GroupName&gt;sample string 2&lt;/GroupName&gt;
+      &lt;/ExpansionGroup&gt;
+      &lt;ExpansionGroupId&gt;4&lt;/ExpansionGroupId&gt;
+      &lt;ExpansionId&gt;1&lt;/ExpansionId&gt;
+      &lt;ExpansionName&gt;sample string 3&lt;/ExpansionName&gt;
+      &lt;Generation&gt;
+        &lt;GenerationName&gt;sample string 2&lt;/GenerationName&gt;
+        &lt;Id&gt;1&lt;/Id&gt;
+      &lt;/Generation&gt;
+      &lt;GenerationId&gt;7&lt;/GenerationId&gt;
+      &lt;HasLogo&gt;true&lt;/HasLogo&gt;
+      &lt;PublishOrder&gt;5&lt;/PublishOrder&gt;
+      &lt;Spoiler&gt;true&lt;/Spoiler&gt;
+    &lt;/CardExpansion&gt;
+    &lt;CardId&gt;1&lt;/CardId&gt;
+    &lt;CardName&gt;sample string 2&lt;/CardName&gt;
+    &lt;CardNameEnglish&gt;sample string 3&lt;/CardNameEnglish&gt;
+    &lt;CardNumber&gt;4&lt;/CardNumber&gt;
+    &lt;CardVariant&gt;sample string 5&lt;/CardVariant&gt;
+    &lt;Clan&gt;
+      &lt;ClanId&gt;1&lt;/ClanId&gt;
+      &lt;ClanName&gt;sample string 2&lt;/ClanName&gt;
+      &lt;Nation&gt;
+        &lt;NationId&gt;1&lt;/NationId&gt;
+        &lt;NationName&gt;sample string 2&lt;/NationName&gt;
+      &lt;/Nation&gt;
+      &lt;NationId&gt;3&lt;/NationId&gt;
+    &lt;/Clan&gt;
+    &lt;ClanId&gt;8&lt;/ClanId&gt;
+    &lt;Critical&gt;1&lt;/Critical&gt;
+    &lt;Effect&gt;sample string 13&lt;/Effect&gt;
+    &lt;ErrataCorrige /&gt;
+    &lt;ExpansionId&gt;7&lt;/ExpansionId&gt;
+    &lt;Faqs&gt;
+      &lt;ApiCardFaq&gt;
+        &lt;Answer&gt;sample string 4&lt;/Answer&gt;
+        &lt;CardId&gt;2&lt;/CardId&gt;
+        &lt;FaqId&gt;1&lt;/FaqId&gt;
+        &lt;Question&gt;sample string 3&lt;/Question&gt;
+      &lt;/ApiCardFaq&gt;
+      &lt;ApiCardFaq&gt;
+        &lt;Answer&gt;sample string 4&lt;/Answer&gt;
+        &lt;CardId&gt;2&lt;/CardId&gt;
+        &lt;FaqId&gt;1&lt;/FaqId&gt;
+        &lt;Question&gt;sample string 3&lt;/Question&gt;
+      &lt;/ApiCardFaq&gt;
+    &lt;/Faqs&gt;
+    &lt;Flavour&gt;sample string 12&lt;/Flavour&gt;
+    &lt;GZone&gt;true&lt;/GZone&gt;
+    &lt;Grade&gt;1&lt;/Grade&gt;
+    &lt;NumberLimited&gt;15&lt;/NumberLimited&gt;
+    &lt;Power&gt;1&lt;/Power&gt;
+    &lt;PromoReleaseInfo&gt;sample string 16&lt;/PromoReleaseInfo&gt;
+    &lt;Race&gt;
+      &lt;RaceId&gt;1&lt;/RaceId&gt;
+      &lt;RaceName&gt;sample string 2&lt;/RaceName&gt;
+    &lt;/Race&gt;
+    &lt;RaceId&gt;9&lt;/RaceId&gt;
+    &lt;Rarity&gt;
+      &lt;RarityId&gt;1&lt;/RarityId&gt;
+      &lt;RarityName&gt;sample string 2&lt;/RarityName&gt;
+      &lt;SparkEffect&gt;true&lt;/SparkEffect&gt;
+    &lt;/Rarity&gt;
+    &lt;RarityId&gt;10&lt;/RarityId&gt;
+    &lt;Shield&gt;1&lt;/Shield&gt;
+    &lt;Skill&gt;1&lt;/Skill&gt;
+    &lt;StandardFaqs&gt;
+      &lt;ApiCardFaq&gt;
+        &lt;Answer&gt;sample string 4&lt;/Answer&gt;
+        &lt;CardId&gt;2&lt;/CardId&gt;
+        &lt;FaqId&gt;1&lt;/FaqId&gt;
+        &lt;Question&gt;sample string 3&lt;/Question&gt;
+      &lt;/ApiCardFaq&gt;
+      &lt;ApiCardFaq&gt;
+        &lt;Answer&gt;sample string 4&lt;/Answer&gt;
+        &lt;CardId&gt;2&lt;/CardId&gt;
+        &lt;FaqId&gt;1&lt;/FaqId&gt;
+        &lt;Question&gt;sample string 3&lt;/Question&gt;
+      &lt;/ApiCardFaq&gt;
+    &lt;/StandardFaqs&gt;
+    &lt;StartLimited&gt;true&lt;/StartLimited&gt;
+    &lt;Type&gt;
+      &lt;TypeId&gt;1&lt;/TypeId&gt;
+      &lt;TypeName&gt;sample string 2&lt;/TypeName&gt;
+    &lt;/Type&gt;
+    &lt;TypeId&gt;11&lt;/TypeId&gt;
+  &lt;/ApiCard&gt;
+&lt;/ArrayOfApiCard&gt;</pre>
+        </div>
+</div></div>
+
+    </section>
+</div>
+
+        </div>
+            <hr />
+            <ul class="list-unstyled text-center small">
+                <li>
+                    Versione 5.14.0.30794
+                </li>
+                <li>
+                    © Progetto Vanguard / Aichi Television Broadcasting
+                </li>
+                <li>
+                    © bushiroad Tutti i diritti riservati
+                </li>
+                <li>
+                    © 2023 Oriental Wave S.r.l.
+                </li>
+            </ul>
+    </div>
+    
+</div>
+    
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '591094478138607');
+        fbq('track', 'PageView');
+    </script>
+    <noscript>
+        <img height="1" width="1" src="https://www.facebook.com/tr?id=591094478138607&ev=PageView &noscript=1" />
+    </noscript>
+</body>
+</html>
